@@ -8,8 +8,11 @@ Files
 "recipe.py"
 This file defines the Recipe class, which encapsulates the structure of recipe data.
 
-"links.py"
+"helperfunctions.py"
 This file contains the function get_region_and_links(), which retrieves a list of cuisines along with their corresponding recipe links. The links are used in the main scraping process.
 
-"allrecipe.py"
+"main.py"
 The main file that drives the scraping process. It obtains the list of links using get_region_and_links() and, for each link, scrapes the webpage using the Recipe class. The final output is stored in "allrecipe.xlsx."
+
+"allrecipe.json"
+This file is the output of the the scraped data
