@@ -1,4 +1,4 @@
-from helperfunctions import get_directions, get_json, get_time
+from helperfunctions import get_directions, get_json
 
 
 class Recipe:
@@ -20,9 +20,9 @@ class Recipe:
         self.get_video()
         self.cuisine = None
 
-        self.prep_time = get_time(self.data.get("prepTime"))
-        self.cook_time = get_time(self.data.get("cookTime"))
-        self.total_time = get_time(self.data.get("totalTime"))
+        self.prep_time = self.data.get("prepTime")
+        self.cook_time = self.data.get("cookTime")
+        self.total_time = self.data.get("totalTime")
 
     def get_description(self):
         self.description = (

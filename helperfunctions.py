@@ -1,5 +1,4 @@
 import json
-from datetime import timedelta
 
 import requests
 from bs4 import BeautifulSoup
@@ -18,13 +17,6 @@ def get_directions(steps):
             step_number += 1
             directions[str(step_number)] = step.get("text")
     return directions
-
-
-def get_time(time):
-    if time is not None:
-        time = int(time[2:-1])
-        time = str(timedelta(minutes=time))
-        return time
 
 
 def get_region_and_links():
